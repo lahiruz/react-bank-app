@@ -3,7 +3,7 @@ import {createStore} from 'redux';
 
 const initialState = {
 	username: "Lahiru",
-	totalAmount: 12345678
+	totalAmount: 20000
 };
 
 export const store = createStore(reducer, initialState);

@@ -1,20 +1,21 @@
 export default (state, action) => {
 	if (action.type === 'WITHDRAW_MONEY') {
-		return getBankAmount(state.money, action.payload.money)
+		return getBankAmount(state, action)
 	}
 
 	return state;
 }
 
-function getBankAmount(bankAmount, withdrawMoney) {
-	let cashInBank = bankAmount;
+function getBankAmount(state, action) {
+	let cashInBank = state.totalAmount;
+	let withdrawMoney = parseInt(action.payload.money,10);
 
-	if (bankAmount > withdrawMoney) {
-		cashInBank = bankAmount - withdrawMoney
+	if (cashInBank > withdrawMoney) {
+		cashInBank = cashInBank - withdrawMoney
 	}
 
 	return {
-		name: state.name,
-		money: cashInBank
+		username: state.username,
+		totalAmount: cashInBank
 	};
 }
