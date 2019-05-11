@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-
 import formatNumber from "format-number";
+
+import {dispatchBtnAction} from './actions';
 import {store} from './store';
 
 import photographer from "./images/banner.png";
@@ -20,11 +21,11 @@ class App extends Component {
         </div>
 
         <section className="app-buttons">
-          <button data-amount="20000">WITHDRAW $20,000</button>
-          <button data-amount="15000">WITHDRAW $15,000</button>
+          <button data-amount="20000" onClick={dispatchBtnAction}>WITHDRAW $20,000</button>
+          <button data-amount="15000" onClick={dispatchBtnAction}>WITHDRAW $15,000</button>
         </section>
 
-        <p className="app-giveaway">Do you want money?</p>
+        <p className="app-giveaway">Click on the above buttons and get money</p>
       </div>
     );
   }
