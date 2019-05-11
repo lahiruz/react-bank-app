@@ -1,18 +1,15 @@
 import React, { Component } from "react";
 
 import formatNumber from "format-number";
+import {store} from './store';
 
 import photographer from "./images/banner.png";
 
 import "./App.css";
 
 class App extends Component {
-  state = {
-    username: "Lahiru",
-    totalAmount: 12345678
-  };
   render() {
-    const { totalAmount, username } = this.state;
+    const { totalAmount, username } = store.getState();
     return (
       <div className="app">
         <img className="app-user-pic" src={photographer} alt="user" />
