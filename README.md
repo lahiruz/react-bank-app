@@ -1,7 +1,7 @@
-#React Bank App
+# React Bank App
 
 <div style="align: center">
-    <img src="./banner.png" />
+    <img src="./image.png" />
 </div>
 
 Simple bank application solution to with React & Redux.
